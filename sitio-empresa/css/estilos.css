@@ -1,0 +1,51 @@
+/* ===== Variables: cambia aquí los colores de la marca ===== */
+:root { --primario: #1e3a8a; --secundario: #3b82f6; --claro: #f1f5f9; --texto: #1e293b; --radio: 10px; }
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: system-ui, sans-serif; color: var(--texto); line-height: 1.6; }
+img { max-width: 100%; display: block; }
+
+/* ===== Navbar ===== */
+.navbar { position: relative; display: flex; justify-content: space-between; align-items: center; padding: 1rem 2rem; background: var(--primario); }
+.navbar a { color: #fff; text-decoration: none; }
+.logo { font-weight: bold; font-size: 1.3rem; }
+.menu { display: flex; gap: 1.5rem; list-style: none; }
+.menu a.activo, .menu a:hover { border-bottom: 2px solid #fff; }
+.btn-menu { display: none; background: none; border: 0; color: #fff; font-size: 1.6rem; cursor: pointer; }
+
+/* ===== Hero ===== */
+.hero { min-height: 60vh; display: grid; place-items: center; text-align: center; padding: 2rem; background: var(--claro);
+  /* background: url(../img/hero.jpg) center/cover; */ }
+.hero-sm { min-height: 30vh; }
+.hero h1 { font-size: 2.3rem; margin-bottom: .5rem; }
+
+/* ===== Layout y componentes ===== */
+.contenedor { max-width: 1100px; margin: auto; padding: 2rem 1rem; }
+.contenedor h2 { margin: 2rem 0 1rem; }
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; }
+.tarjeta { border: 1px solid #e2e8f0; border-radius: var(--radio); padding: 1rem; }
+.tarjeta img { height: 180px; width: 100%; object-fit: cover; border-radius: var(--radio); margin-bottom: 1rem; }
+.placeholder { border: 2px dashed #94a3b8; border-radius: var(--radio); padding: 2rem; text-align: center; color: #64748b; background: var(--claro); }
+.img-espacio { height: 180px; display: grid; place-items: center; margin-bottom: 1rem; }
+.btn { display: inline-block; background: var(--secundario); color: #fff; border: 0; padding: .6rem 1.4rem; border-radius: 6px; cursor: pointer; text-decoration: none; margin-top: .5rem; }
+.btn-peligro { background: #dc2626; }
+
+/* ===== Carrusel ===== */
+.carrusel { position: relative; overflow: hidden; border-radius: var(--radio); }
+.slides { display: flex; transition: transform .5s; }
+.slide { min-width: 100%; height: 350px; display: grid; place-items: center; }
+.carrusel button { position: absolute; top: 50%; transform: translateY(-50%); background: #0006; color: #fff; border: 0; font-size: 2rem; padding: 0 .8rem; cursor: pointer; }
+.prev { left: 0; } .next { right: 0; }
+
+/* ===== Formularios ===== */
+form { display: grid; gap: 1rem; max-width: 450px; }
+input, textarea { padding: .7rem; border: 1px solid #cbd5e1; border-radius: 6px; font: inherit; }
+
+footer { text-align: center; padding: 1.5rem; background: var(--primario); color: #fff; margin-top: 2rem; }
+
+/* ===== Responsive ===== */
+@media (max-width: 750px) {
+  .btn-menu { display: block; }
+  .menu { display: none; position: absolute; top: 100%; left: 0; right: 0; flex-direction: column; background: var(--primario); padding: 1rem 2rem; z-index: 10; }
+  .menu.abierto { display: flex; }
+}

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Productos | [Nombre empresa]</title>
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+  <div id="navbar"></div>
+
+  <section class="hero hero-sm">
+    <div>
+      <h1>Productos</h1>
+      <p>Aquí anexa la información general de los productos.</p>
+    </div>
+  </section>
+
+  <main class="contenedor">
+    <h2>Catálogo</h2>
+    <div id="lista-productos" class="grid"></div>
+
+    <!-- Formulario del CRUD (en el futuro, mostrar solo a usuarios con login) -->
+    <h2>Administrar productos</h2>
+    <form id="form-producto">
+      <input type="hidden" name="idx" value="">
+      <input name="nombre" placeholder="Nombre del producto" required>
+      <textarea name="descripcion" placeholder="Descripción" rows="3" required></textarea>
+      <input name="imagen" placeholder="Ruta o URL de la imagen (opcional)">
+      <button class="btn">Guardar</button>
+    </form>
+  </main>
+
+  <div id="footer"></div>
+  <script src="js/main.js"></script>
+  <script src="js/crud.js"></script>
+</body>
+</html>
